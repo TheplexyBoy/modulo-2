@@ -1,0 +1,157 @@
+/* Index */
+
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        body header{
+            margin: 0px;
+        }
+
+        .cont-header {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(195, 195, 195);
+            margin: 0px;                               
+        }
+
+        .card-header {
+            margin: 5px 10px;
+            padding: 5px 10px;       
+        }
+
+        .section-div {
+            margin: 15px;
+            background-color: rgb(231, 235, 235);
+            border-radius: 10px;
+            padding: 10px;
+
+        }
+
+        #label{
+            border-radius: 20px;
+            padding: 20px;
+            width: 300px;
+        }
+
+        #section-index {
+            background-color: rgb(169, 177, 184);
+        }
+
+
+/* My animals. */
+
+    /* header */
+
+    #mascotas{
+        background-color: rgba(215, 222, 228, 0.992);
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header p {
+        color: rgb(199, 122, 20);
+        padding: 15px;
+    }
+
+    /* Section 1 - Cats cards */
+    section{
+        display: flex;
+        flex-direction: column;
+    }
+    .imagen {
+    width: 300px;
+    height: auto;
+    }
+
+    .div_contenedor {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        background-color: rgb(109, 189, 173);
+        padding: 20px;
+    }
+    
+    .card {
+        text-align: center;
+        width: 200px
+    }
+    
+    .card img {
+        width: 200px;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .card p {
+        color: rgb(0, 0, 0);
+        height: auto;
+        width: 300px;
+    }
+
+    .card-p p{
+        background-color: aliceblue;
+        width: 200px;
+        margin: 0px;
+        border-radius: 10px;
+    }
+
+    /* Section 2 - About cats */
+
+    #section-2 {
+        background-color: rgb(212, 227, 232);
+    }
+
+        /* Title */
+        #title-content {
+            display: flex; 
+            width: 100%;
+            justify-content: center;
+        }
+        #title-content  h2{
+            width: fit-content;
+            background-color: rgba(229, 234, 238, 0.992);
+            padding: 5px 15px;
+            border-radius: 15px;
+            line-height: 2;   
+        }
+
+        /* Text */
+
+        #about-cats p {
+            width: 300px;
+
+        }
+        /* Card about cats */
+
+        .cards-contendor {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+    /* Button and exit button */
+
+    #exit {
+        position: absolute;
+        padding: 5px;
+        transform: translateY(-40px);
+        margin: 4px;
+    }
+
+    button{
+        background-color: rgb(43, 43, 55);
+        color: white;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: rgb(20, 20, 19);
+    }
+
+
+
+
