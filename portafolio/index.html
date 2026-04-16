@@ -1,51 +1,239 @@
 <!DOCTYPE html>
-<html = lang"en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name "viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/src/styles/styles.css">
-        <title>Riwi</title>
-    </head>
-    <body>
-        <header>
-            <div class="cont-header">
-                <div class="card-header">
-                    <h1>Portafolio</h1>
-                </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barranquilla</title>
+</head>
+<style>
+body{
+        margin: 0;
+        padding: 0
+    }
+header {
+    background-color: rgb(207, 37, 31);
+    padding: 0rem 0.8rem;
+    list-style: none;
+}
 
-                <div class="card-header">
-                    <h3><a href="facebook.com"><button>Contact me</button></a></h3>
-                </div>
+header h3{
+    line-height: 0.1;
+}
 
+header h2{
+    line-height: 0.1;
+}
+
+nav {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+#nav-left {
+    display: flex;
+    gap: 2rem;
+}
+
+/* Main */
+
+#text-banner{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+}
+
+#text-banner h1{
+    text-align: center;
+}
+.cont {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 30vh;
+
+}
+
+.content-img {
+    position: relative;
+    opacity: 40%;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+#banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#introduccion-p{
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+/* Malecon */
+
+#malecon {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    background-color: rgb(14, 13, 13);
+
+}
+
+#cont-malecon-img {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#malecon-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#cont-text-malecon {
+    width: 100%;
+    margin: 1rem;
+}
+
+#cont-text-malecon h2 {
+    text-align: center;
+    color: rgb(223, 223, 157);
+}
+
+#cont-text-malecon p {
+    color: aliceblue;
+}
+
+#cont-text-malecon img {
+    width: 100%;
+    height: auto;
+    border-radius: 2vw;
+}
+
+/* Lugares */
+
+#lugares {
+    width: 100%;
+    height: 100%;
+}
+
+#lugares-header {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(58, 134, 201);
+
+}
+
+#lugares h2 {
+    text-align: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.cards-l {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+
+}
+
+.cards-l .card {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+}
+
+.cards-l .card img {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+
+</style>
+<body>
+    <header>
+        <nav>
+            <h2>Barranquilla</h2>
+            <div id="nav-left">
+                <h3>Zonas Verdes</h3>
+                <h3>Parques</h3>
             </div>
-        </header>
-        <main>
-            <section id="section-index">
-                <div class="section-div">
-                    <h2>About me</h2>
-                    <p>I'm Andres Quintero, I am nine teen years old,  I live in Colombia, Barranquilla, actually study at UNAD university in carrer engennering system.</p>
-                </div>
-                
-                <div class="section-div">
-                    <h2>Proyects</h2>
-                        <ul>
-                            <li><a href="src/templates/mascotas.html">My animals</a></li>
-                        </ul>
-                </div>
-            </section>
+        </nav>
+    </header>
+    <main>
+        <section class="cont">
+            <div class="content-img">
+                <img  id="banner-img"  src="/src/images/identificador-de-barranquilla-2.jpg" alt="">
+            </div>
+            <div id="text-banner">
+                <h1>Explora la belleza de Barranquilla</h1>
+                <p id="introduccion-p">Barranquilla, es la capital del departamento Atlántico de Colombia y es un desbordante puerto marino, bordeado por el río Magdalena. La ciudad es conocida por su enorme Carnaval, que reúne a artistas con extravagantes disfraces, carros elaborados y música cumbia. En el elegante vecindario El Prado, el Museo Romántico exhibe artefactos de festivales y exhibiciones anteriores de famosos colombianos, como el escritor Gabriel García Márquez.</p>
+            </div>
+        </section>
 
-            <section id="label">
-                <h2>Conctact u</h2>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="usuario" placeholder="Example" required>
-                <br>
-                <br>
-                <label for="correo">Correo:</label>
-                <input type="email" id="correo" name="email" placeholder="example@gmail.com" required>
-                <br>
-                <br>
-                <button type="submit">Registrarse</button>
-            </section>
-        </main>
-    </body>
+        <section id="malecon">
+            <div id="cont-text-malecon">
+                <h2>El Gran Malecón y el Río Magdalena</h2>
+                <p>El Gran Malecón del Río en Barranquilla es un destacado paseo peatonal y turístico de 5.5 km a orillas del río Magdalena, considerado uno de los sitios más visitados de Colombia. Ofrece zonas verdes, restaurantes, gastronomía en "Caimán del Río", parques, ciclovías, y vistas al atardecer. Es un lugar seguro y familiar, ideal para caminar y relajarse.</p>
+                <img src="/src/images/bandera.png" alt="">
+            </div>
+            <div id="cont-malecon-img">
+                <img id="malecon-img" src="/src/images/Malecon.jpeg" alt="">
+            </div>
+            <div>
+                <img src="" alt="">
+            </div>
+        </section>
+
+        <section id="lugares">
+            <div id="lugares-header">
+                <h2>Lugares mas visitados</h2>
+            </div>
+            <div class="cards-l">   
+                <div class="card">
+                        <img src="/src/images/ventana.jpg" alt="">
+                        <h3>Ventana del mundo</h3>
+                        <p>La Ventana al mundo es un monumento público ubicado en Barranquilla, Colombia. Fue construido a finales de 2018 para coincidir con los XXIII Juegos Centroamericanos y del Caribe de los cuales la ciudad fue anfitriona.</p>
+                    </div>
+                    <div class="card">
+                        <img src="/src/images/aleta.jpg" alt="">
+                        <h3>Aleta del tiburon</h3>
+                        <p>La Ventana de Campeones, conocida informalmente como Aleta del tiburón, es un monumento público ubicado en Barranquilla, Colombia. Fue donado por la empresa Tecnoglass como homenaje al equipo de fútbol Junior de Barranquilla. </p>
+                    </div>
+                    <div class="card">
+                        <img src="/src/images/luna-rio.jpeg" alt="">
+                        <h3>Luna del Río</h3>
+                        <p>La Luna del Río es una imponente noria (rueda de la fortuna) de 65 metros de altura situada en el Gran Malecón de Barranquilla, inaugurada a finales de 2025 como el nuevo ícono turístico de la ciudad. Ofrece vistas 360° del río Magdalena y la ciudad con 44 cabinas climatizadas, siendo la más grande de Colombia.</p>
+                    </div>
+                    <div class="card">
+                        <img src="/src/images/statua.jpeg" alt="">
+                        <h3>Estatua de Shakira</h3>
+                        <p>La escultura de Shakira es un monumento que se encuentra en el parque Metropolitano, adyacente al estadio Metropolitano, en Barranquilla, Colombia.​​</p>
+                    </div>
+                    <div class="card">
+                        <img src="/src/images/barrio.jpg" alt="">
+                        <h3>Barrio el Prado</h3>
+                        <p>El barrio El Prado en Barranquilla, fundado en 1920 por Karl y Robert Parrish, es el primer desarrollo urbano planificado de Colombia, destacado por su arquitectura republicana, ecléctica y amplias avenidas arboladas. Es un sector residencial y patrimonial de lujo, famoso por sus mansiones históricas, ambiente residencial exclusivo y el emblemático Hotel El Prado.</p>
+                    </div>
+            </div>
+        </section>
+    </main>
+</body>
 </html>
