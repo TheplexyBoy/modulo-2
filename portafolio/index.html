@@ -1,239 +1,300 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/styles.css">
     <title>Barranquilla</title>
 </head>
-<style>
-body{
-        margin: 0;
-        padding: 0
-    }
-header {
-    background-color: rgb(207, 37, 31);
-    padding: 0rem 0.8rem;
-    list-style: none;
-}
-
-header h3{
-    line-height: 0.1;
-}
-
-header h2{
-    line-height: 0.1;
-}
-
-nav {
-    display: flex;
-    text-align: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-}
-
-#nav-left {
-    display: flex;
-    gap: 2rem;
-}
-
-/* Main */
-
-#text-banner{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-}
-
-#text-banner h1{
-    text-align: center;
-}
-.cont {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    height: 30vh;
-
-}
-
-.content-img {
-    position: relative;
-    opacity: 40%;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-}
-
-#banner-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-#introduccion-p{
-    text-align: center;
-    color: rgb(0, 0, 0);
-}
-
-/* Malecon */
-
-#malecon {
-    display: flex;
-    flex-direction:row;
-    justify-content: space-between;
-    background-color: rgb(14, 13, 13);
-
-}
-
-#cont-malecon-img {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
-#malecon-img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-
-#cont-text-malecon {
-    width: 100%;
-    margin: 1rem;
-}
-
-#cont-text-malecon h2 {
-    text-align: center;
-    color: rgb(223, 223, 157);
-}
-
-#cont-text-malecon p {
-    color: aliceblue;
-}
-
-#cont-text-malecon img {
-    width: 100%;
-    height: auto;
-    border-radius: 2vw;
-}
-
-/* Lugares */
-
-#lugares {
-    width: 100%;
-    height: 100%;
-}
-
-#lugares-header {
-    width: 100%;
-    height: 100%;
-    background-color: rgb(58, 134, 201);
-
-}
-
-#lugares h2 {
-    text-align: center;
-    justify-content: center;
-    margin: 0;
-}
-
-.cards-l {
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    padding: 1rem;
-    box-sizing: border-box;
-
-}
-
-.cards-l .card {
-    width: 100%;
-    height: 100%;
-    background-color: rgb(255, 255, 255);
-    border-radius: 1rem;
-}
-
-.cards-l .card img {
-    width: 100%;
-    height: 10rem;
-    object-fit: cover;
-    border-radius: 1rem;
-}
-
-
-</style>
 <body>
+
+    <!-- HEADER -->
     <header>
         <nav>
-            <h2>Barranquilla</h2>
+            <h2 class="nav-brand">Barranquilla</h2>
+
+            <!-- Botón hamburguesa (solo visible en móvil via CSS) -->
+            <button id="menu-btn" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <div id="nav-left">
-                <h3>Zonas Verdes</h3>
-                <h3>Parques</h3>
+                <h3><a href="/src/templates/parques-barranquilla.html">Parques</a></h3>
+                <h3><a href="#contacto">Contacto</a></h3>
             </div>
         </nav>
     </header>
+
     <main>
+
+        <!-- HERO -->
         <section class="cont">
             <div class="content-img">
-                <img  id="banner-img"  src="/src/images/identificador-de-barranquilla-2.jpg" alt="">
+                <img id="banner-img" src="/src/images/identificador-de-barranquilla-2.jpg" alt="Barranquilla">
             </div>
             <div id="text-banner">
-                <h1>Explora la belleza de Barranquilla</h1>
-                <p id="introduccion-p">Barranquilla, es la capital del departamento Atlántico de Colombia y es un desbordante puerto marino, bordeado por el río Magdalena. La ciudad es conocida por su enorme Carnaval, que reúne a artistas con extravagantes disfraces, carros elaborados y música cumbia. En el elegante vecindario El Prado, el Museo Romántico exhibe artefactos de festivales y exhibiciones anteriores de famosos colombianos, como el escritor Gabriel García Márquez.</p>
+                <div class="hero-tag">Colombia · Caribe</div>
+                <h1>Explora la belleza<br>de <em>Barranquilla</em></h1>
+                <p id="introduccion-p">Barranquilla, capital del Atlántico, es una ciudad vibrante bordeada por el río Magdalena. Conocida por su Carnaval, su gastronomía y su gente cálida, es la puerta de entrada al Caribe colombiano.</p>
+                <a href="#lugares" class="hero-cta">Descubrir la ciudad ↓</a>
             </div>
         </section>
 
+        <!-- MALECÓN -->
         <section id="malecon">
             <div id="cont-text-malecon">
-                <h2>El Gran Malecón y el Río Magdalena</h2>
-                <p>El Gran Malecón del Río en Barranquilla es un destacado paseo peatonal y turístico de 5.5 km a orillas del río Magdalena, considerado uno de los sitios más visitados de Colombia. Ofrece zonas verdes, restaurantes, gastronomía en "Caimán del Río", parques, ciclovías, y vistas al atardecer. Es un lugar seguro y familiar, ideal para caminar y relajarse.</p>
-                <img src="/src/images/bandera.png" alt="">
+                <div class="malecon-tag">Ícono de la ciudad</div>
+                <h2>El Gran Malecón<br>y el Río Magdalena</h2>
+                <p>El Gran Malecón del Río en Barranquilla es un destacado paseo peatonal y turístico de 5.5 km a orillas del río Magdalena, considerado uno de los sitios más visitados de Colombia. Ofrece zonas verdes, restaurantes, gastronomía en "Caimán del Río", parques, ciclovías, y vistas al atardecer.</p>
+                <div class="malecon-stats">
+                    <div class="mstat"><span>5.5 km</span><small>De paseo peatonal</small></div>
+                    <div class="mstat"><span>#1</span><small>Sitio más visitado</small></div>
+                    <div class="mstat"><span>2025</span><small>Luna del Río</small></div>
+                </div>
+                <img src="/src/images/bandera.png" alt="Bandera de Barranquilla">
             </div>
             <div id="cont-malecon-img">
-                <img id="malecon-img" src="/src/images/Malecon.jpeg" alt="">
-            </div>
-            <div>
-                <img src="" alt="">
+                <img id="malecon-img" src="/src/images/Malecon.jpeg" alt="Malecón de Barranquilla">
             </div>
         </section>
 
+        <!-- LUGARES -->
         <section id="lugares">
             <div id="lugares-header">
-                <h2>Lugares mas visitados</h2>
+                <h2>Lugares más visitados</h2>
+                <p>Monumentos, barrios y atracciones que hacen única a Barranquilla</p>
             </div>
-            <div class="cards-l">   
+            <div class="cards-l">
                 <div class="card">
-                        <img src="/src/images/ventana.jpg" alt="">
+                    <div class="card-img-wrap">
+                        <img src="/src/images/ventana.jpg" alt="Ventana del mundo">
+                        <div class="card-overlay"><span>Ver más →</span></div>
+                    </div>
+                    <div class="card-body">
                         <h3>Ventana del mundo</h3>
-                        <p>La Ventana al mundo es un monumento público ubicado en Barranquilla, Colombia. Fue construido a finales de 2018 para coincidir con los XXIII Juegos Centroamericanos y del Caribe de los cuales la ciudad fue anfitriona.</p>
+                        <p>Monumento construido en 2018 para los XXIII Juegos Centroamericanos y del Caribe, del que Barranquilla fue anfitriona.</p>
                     </div>
-                    <div class="card">
-                        <img src="/src/images/aleta.jpg" alt="">
-                        <h3>Aleta del tiburon</h3>
-                        <p>La Ventana de Campeones, conocida informalmente como Aleta del tiburón, es un monumento público ubicado en Barranquilla, Colombia. Fue donado por la empresa Tecnoglass como homenaje al equipo de fútbol Junior de Barranquilla. </p>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrap">
+                        <img src="/src/images/aleta.jpg" alt="Aleta del tiburón">
+                        <div class="card-overlay"><span>Ver más →</span></div>
                     </div>
-                    <div class="card">
-                        <img src="/src/images/luna-rio.jpeg" alt="">
+                    <div class="card-body">
+                        <h3>Aleta del Tiburón</h3>
+                        <p>Donada por Tecnoglass como homenaje al equipo de fútbol Junior de Barranquilla. Un símbolo de orgullo local.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrap">
+                        <img src="/src/images/luna-rio.jpeg" alt="Luna del Río">
+                        <div class="card-overlay"><span>Ver más →</span></div>
+                    </div>
+                    <div class="card-body">
                         <h3>Luna del Río</h3>
-                        <p>La Luna del Río es una imponente noria (rueda de la fortuna) de 65 metros de altura situada en el Gran Malecón de Barranquilla, inaugurada a finales de 2025 como el nuevo ícono turístico de la ciudad. Ofrece vistas 360° del río Magdalena y la ciudad con 44 cabinas climatizadas, siendo la más grande de Colombia.</p>
+                        <p>Noria de 65 metros inaugurada en 2025, con 44 cabinas climatizadas y vistas 360° al río Magdalena.</p>
                     </div>
-                    <div class="card">
-                        <img src="/src/images/statua.jpeg" alt="">
+                </div>
+                <div class="card">
+                    <div class="card-img-wrap">
+                        <img src="/src/images/statua.jpeg" alt="Estatua de Shakira">
+                        <div class="card-overlay"><span>Ver más →</span></div>
+                    </div>
+                    <div class="card-body">
                         <h3>Estatua de Shakira</h3>
-                        <p>La escultura de Shakira es un monumento que se encuentra en el parque Metropolitano, adyacente al estadio Metropolitano, en Barranquilla, Colombia.​​</p>
+                        <p>Escultura ubicada en el parque Metropolitano, homenaje a la artista barranquillera más famosa del mundo.</p>
                     </div>
-                    <div class="card">
-                        <img src="/src/images/barrio.jpg" alt="">
-                        <h3>Barrio el Prado</h3>
-                        <p>El barrio El Prado en Barranquilla, fundado en 1920 por Karl y Robert Parrish, es el primer desarrollo urbano planificado de Colombia, destacado por su arquitectura republicana, ecléctica y amplias avenidas arboladas. Es un sector residencial y patrimonial de lujo, famoso por sus mansiones históricas, ambiente residencial exclusivo y el emblemático Hotel El Prado.</p>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrap">
+                        <img src="/src/images/barrio.jpg" alt="Barrio El Prado">
+                        <div class="card-overlay"><span>Ver más →</span></div>
                     </div>
+                    <div class="card-body">
+                        <h3>Barrio El Prado</h3>
+                        <p>El primer desarrollo urbano planificado de Colombia, fundado en 1920, con arquitectura republicana y el icónico Hotel El Prado.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrap">
+                        <img src="/src/images/aduana.jpg" alt="La Aduana">
+                        <div class="card-overlay"><span>Ver más →</span></div>
+                    </div>
+                    <div class="card-body">
+                        <h3>La Aduana</h3>
+                        <p>Edificio de arquitectura republicana en la Vía 40, corazón cultural del centro histórico de Barranquilla.</p>
+                    </div>
+                </div>
             </div>
         </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto">
+            <div class="contacto-inner">
+                <div class="contacto-info">
+                    <div class="contacto-tag">¿Tienes preguntas?</div>
+                    <h2>Contáctanos</h2>
+                    <p>¿Quieres saber más sobre los parques, eventos o turismo en Barranquilla? Escríbenos y te respondemos con gusto.</p>
+                    <div class="info-items">
+                        <div class="info-item">
+                            <span class="info-icon">📍</span>
+                            <div>
+                                <strong>Dirección</strong>
+                                <small>Alcaldía de Barranquilla, Calle 32 #43-31</small>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">📞</span>
+                            <div>
+                                <strong>Teléfono</strong>
+                                <small>+57 (5) 330 0000</small>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">✉️</span>
+                            <div>
+                                <strong>Correo</strong>
+                                <small>info@barranquilla.gov.co</small>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🕐</span>
+                            <div>
+                                <strong>Horario</strong>
+                                <small>Lun – Vie: 8:00 am – 5:00 pm</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contacto-form">
+                    <!-- Mensaje de éxito — JS lo hace visible al enviar -->
+                    <div id="form-mensaje">✅ ¡Mensaje enviado! Te responderemos pronto.</div>
+
+                    <form id="formulario-contacto">
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" placeholder="Tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" placeholder="tu@correo.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="asunto">Asunto</label>
+                            <select id="asunto">
+                                <option value="">Selecciona un tema...</option>
+                                <option>Información turística</option>
+                                <option>Parques y espacios públicos</option>
+                                <option>Eventos y carnaval</option>
+                                <option>Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+                        </div>
+                        <button type="submit" class="form-btn">Enviar mensaje →</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
     </main>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="footer-logo">Barranquilla</span>
+                <p>La puerta de oro de Colombia</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Inicio</a>
+                <a href="/src/templates/parques-barranquilla.html">Parques</a>
+                <a href="#lugares">Lugares</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <div class="footer-copy">© 2026 · Barranquilla, Colombia</div>
+        </div>
+    </footer>
+    <script>
+
+        const menuBtn = document.getElementById('menu-btn');
+        const navLeft = document.getElementById('nav-left');
+
+        menuBtn.addEventListener('click', function() {
+            menuBtn.classList.toggle('abierto');
+            navLeft.classList.toggle('visible');
+        });
+
+        navLeft.querySelectorAll('a').forEach(function(enlace) {
+            enlace.addEventListener('click', function() {
+                menuBtn.classList.remove('abierto');
+                navLeft.classList.remove('visible');
+            });
+        });
+
+        const formulario  = document.getElementById('formulario-contacto');
+        const formMensaje = document.getElementById('form-mensaje');
+
+        formulario.addEventListener('submit', function(evento) {
+            evento.preventDefault(); 
+
+            const nombre  = document.getElementById('nombre').value.trim();
+            const email   = document.getElementById('email').value.trim();
+            const asunto  = document.getElementById('asunto').value;
+            const mensaje = document.getElementById('mensaje').value.trim();
+
+            if (nombre === '' || email === '' || asunto === '' || mensaje === '') {
+                alert('Por favor completa todos los campos.');
+                return;
+            }
+            formMensaje.style.display = 'block';
+            formulario.reset();
+
+            setTimeout(function() {
+                formMensaje.style.display = 'none';
+            }, 4000);
+        });
+
+        const botonArriba = document.createElement('button');
+        botonArriba.textContent = '↑';
+        botonArriba.style.cssText = `
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #C8102E;
+            color: white;
+            border: none;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            font-size: 20px;
+            font-weight: 700;
+            cursor: pointer;
+            display: none;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+            z-index: 999;
+        `;
+        document.body.appendChild(botonArriba);
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 400) {
+                botonArriba.style.display = 'block';
+            } else {
+                botonArriba.style.display = 'none';
+            }
+        });
+
+        botonArriba.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+    </script>
+
 </body>
 </html>
